@@ -1,5 +1,5 @@
 class Book:
-    """Base class representing a general book."""
+    """Base class representing a book."""
 
     def __init__(self, title, author):
         self.title = title
@@ -23,7 +23,7 @@ class PrintBook(Book):
 
 
 class Library:
-    """Class that demonstrates composition by managing a collection of books."""
+    """Class demonstrating composition to manage a collection of books."""
 
     def __init__(self):
         self.books = []
@@ -33,7 +33,7 @@ class Library:
         self.books.append(book)
 
     def list_books(self):
-        """List all books with their details."""
+        """List all books in the library."""
         for book in self.books:
             if isinstance(book, EBook):
                 print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}KB")
